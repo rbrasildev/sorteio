@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./../img/icon.png" type="image/x-icon">
+    <title>Sorteador de Nomes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen flex flex-col items-center">
+    <div class="flex justify-center flex-col items-center rounded-xl mt-6 p-6 w-full max-w-xl">
+        <img src="https://redeconexaonet.com/img/logo.png" />
+        <h1 class="text-xl font-bold text-gray-500 text-center mb-4">Sorteador de Nomes</h1>
+        <div class="flex gap-2 items-center">
+            <p class="text-lg dark:text-gray-300">Sortear</p>
+            <input type="number" id="quantityInput" min="1" value="1"
+                class="block w-16 p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <p class="text-lg dark:text-gray-300">nome</p>
+        </div>
+        <label
+            class="dark:text-gray-500 p-4 rounded-xl dark:bg-gray-800 my-2 cursor-pointer w-full flex justify-center border border-dashed border-gray-500"
+            id="label" for="fileInput">Upload do arquivo</label>
+        <input type="file" id="fileInput" accept=".csv"
+            class="hidden px-4 text-center my-2 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4">
+        <button id="drawButton"
+            class="w-full bg-blue-800 py-4 text-white px-4 py-2 rounded-xl hover:bg-blue-600 transition">
+            Sortear
+        </button>
+    </div>
+    <div class="bg-gray-100 dark:bg-gray-900 min-h-screen">
+        <ul id="resultList" class="mt-4 space-y-2 w-full"></ul>
+        <ul id="teste"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
